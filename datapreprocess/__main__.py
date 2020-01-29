@@ -60,9 +60,9 @@ def generate_histogram(w, out_path, xlabel, filtered=False):
     plt.hist(w, bins='auto')
 
     if filtered:
-        filename = xlabel + "_filtered_raw_data.png"
+        filename = xlabel + "_filtered_data.png"
     else:
-        filename = xlabel + "_raw_Data.png"
+        filename = xlabel + "_raw_data.png"
     plt.savefig(os.path.join(out_path,filename))
 
     # Colours for different percentiles
@@ -105,9 +105,9 @@ def generate_histogram(w, out_path, xlabel, filtered=False):
     plt.legend(handles, labels, bbox_to_anchor=(0.5, 0., 0.6, 0.99))
 
     if filtered:
-        filename = xlabel + "_filtered_analyzed_data.png"
+        filename = xlabel + "_filtered_annotated_data.png"
     else:
-        filename = xlabel + "_analyzed_Data.png"
+        filename = xlabel + "_raw_annotated_data.png"
     plt.savefig(os.path.join(out_path,filename))
 
 
@@ -195,7 +195,6 @@ def main(verbose, input_dir):
             if verbose:
                 print("COMPLETE!")
             cnt_good += 1
-
 
     # result report
     print("**************************************")
