@@ -1,6 +1,6 @@
 ## Apple Test Log Visulation Tool
 
-Author: Haoxuan Zhu (hxzhu@umich)
+Author: Haoxuan Zhu (hxzhu@umich.edu)
 
 Date: Jan 27, 2019
 
@@ -93,7 +93,7 @@ $ datapreprocess sample_logs -v
 * By default, the program prevents the users from overwriting the existing files, that being said, the program can not run when the `INPUT_DIR/result` exists.
 * By default for all heatmaps, the x-axis is `ROW`, y-axis is `COLUMN`
 
-#### Histogram and Filtering outliers
+#### Histogram and Filtering Outliers
 
 *A more user-friendly interface will be updated until the correctness of the program is examined by Apple*
 
@@ -105,7 +105,7 @@ $ datapreprocess sample_logs -v
 * By default, the program assumes that there are no error count inside the eye area.
 * By default, the program uses 95% confidence interval. (Later, user can set the confidence percentage through terminal commands)
 
-* Users can determine how tight the interval is by tuning the `confidence_coefficient`. By default, ``confidence_coefficient=1.96`, which yields `95%`  confidence  
+* Users can determine how tight the interval is by tuning the `confidence_coefficient`. By default, `confidence_coefficient=1.96`, which yields `95%`  confidence  
   * Check `http://onlinestatbook.com/2/calculators/normal_dist.html`
 * There are other method's to decide the lowerbound and upperbound of the inliers
   * eg: Cook's Distance
