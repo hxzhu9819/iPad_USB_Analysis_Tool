@@ -197,25 +197,6 @@ def main(verbose, input_dir):
             cnt_good += 1
 
 
-    # # Analyze heights and widths
-    # mean = np.mean(widths)
-    # std = np.std(widths)
-    # lowerbound = mean - confidence_coefficient * std
-    # upperbound = mean + confidence_coefficient * std
-    # print("Width Confidence Interval: [{}, {}]".format(lowerbound, upperbound))
-
-    # # Find outliers based on the confidence interval
-    # outlier_log_index = [i for i in range(len(widths)) if (widths[i] < lowerbound or widths[i] > upperbound)]
-    # for i in outlier_log_index:
-    #     print(log_name_for_wh[i] + "contains outlier")
-
-    # generate_histogram(widths, os.path.join(path,"histogram"), "widths", False)
-
-    # # Filter outliers
-    # filtered_widths = [widths[i] for i in range(len(widths)) if (widths[i] >= lowerbound and widths[i] <= upperbound)]
-
-    # generate_histogram(filtered_widths, os.path.join(path,"histogram"), "widths", True)
-    
     # result report
     print("**************************************")
     print("Scanned",cnt_txt, "files.\nSuccess:", cnt_good, "Pending:", len(incomplete_lists))
@@ -225,6 +206,7 @@ def main(verbose, input_dir):
         print(err_file)
     print("**************************************")
 
+    # histogram and confidence interval analysis
     analyze_distribution(widths, "Width", log_name_for_wh, path)
     analyze_distribution(heights, "Height", log_name_for_wh, path)
 
