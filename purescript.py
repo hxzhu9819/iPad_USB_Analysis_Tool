@@ -62,7 +62,7 @@ for log in logs:
         # plt.show()
         plt.cla()
         plt.clf()
-        #print("Eyescan {} complete!".format(log))
+        # print("Eyescan {} complete!".format(log))
         print("COMPLETE!")
 
 print("Incomplete scans:")
