@@ -14,7 +14,7 @@ setup(
     install_requires=[
         'click==7.0',
         'matplotlib==3.1.0',
-        'numpy==1.16.4',
+        'numpy==1.22.0',
         
     ],
     entry_points={
